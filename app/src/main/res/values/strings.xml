@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Brain Trainer 2</string>
+    <string name="second">0s</string>
+    <string name="score">0/0</string>
+    <string name="question">1 + 1</string>
+    <string name="status">Done!</string>
+    <string name="play_again">Play Again</string>
+    <string name="go">Go!</string>
+</resources>

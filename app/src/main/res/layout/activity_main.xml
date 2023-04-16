@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <Button
+            android:id="@+id/btnPlayAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:onClick="playAgain"
+            android:text="@string/play_again"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewStatus" />
+
+        <TextView
+            android:id="@+id/txtViewQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/question"
+            android:textSize="20sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/txtViewScore"
+            app:layout_constraintStart_toEndOf="@+id/txtViewSecond"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtViewScore"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="#75CFF8"
+            android:gravity="center"
+            android:text="@string/score"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtViewSecond"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="#FF9800"
+            android:gravity="center"
+            android:text="@string/second"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:stretchColumns="*"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewQuestion">
+
+
+            <TableRow
+                android:id="@+id/table_row1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:width="60dp"
+                    android:height="100dp"
+                    android:background="#F44336"
+                    android:gravity="center"
+                    android:onClick="clickItem"
+                    android:tag="0"
+                    android:text="8"
+                    android:textColor="#000000"
+                    android:textSize="60sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:width="60dp"
+                    android:height="100dp"
+                    android:background="#C48BCD"
+                    android:gravity="center"
+                    android:onClick="clickItem"
+                    android:tag="1"
+                    android:text="15"
+                    android:textColor="#000000"
+                    android:textSize="60sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:id="@+id/table_row2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txtView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:width="60dp"
+                    android:height="100dp"
+                    android:background="#6D7BC5"
+                    android:gravity="center"
+                    android:onClick="clickItem"
+                    android:tag="2"
+                    android:text="23"
+                    android:textColor="#000000"
+                    android:textSize="60sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:width="60dp"
+                    android:height="100dp"
+                    android:background="#7DCD80"
+                    android:gravity="center"
+                    android:onClick="clickItem"
+                    android:tag="3"
+                    android:text="50"
+                    android:textColor="#000000"
+                    android:textSize="60sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txtViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="@string/status"
+            android:textSize="34sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnGo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="startGame"
+        android:padding="40dp"
+        android:text="@string/go"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
